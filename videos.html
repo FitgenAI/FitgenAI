@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - FitGenAI</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="script/video-script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="left-section">
+            <img class="fitgenAI-logo" src="icons/fitgenAI-logo.png">
+        </div>
+        <h1>FitGenAI</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="yoga.html">Yoga</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="subscription.html">Subscribe</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="videos-section">
+            <h2>Fitness Videos</h2>
+            <form id="upload-form">
+                <label for="video-file">Upload a Video:</label>
+                <input type="file" id="video-file" accept="video/*">
+                <button type="submit">Upload Video</button>
+            </form>
+
+            <div id="videos-gallery">
+                <h3>Video Gallery</h3>
+                <div id="video-list">
+                    <!-- Videos will be added here dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FitGenAI</p>
+    </footer>
+</body>
+</html>

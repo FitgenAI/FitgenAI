@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitGenAI</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="script/script.js"></script>
+    <script defer src="script/app.js"></script>
+    <script defer src="models/user.js"></script>
+    <script defer src="routes/auth.js"></script>
+    <script defer src=".env"></script>
+    <script>
+        function fetchData() {
+            fetch('/api/data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('output').innerText = data.message;
+                });
+        }
+    </script>
+        <script defer src="server.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="left-section">
+            <img class="fitgenAI-logo" src="icons/fitgenAI-logo.png">
+        </div>
+        <h1>FitGenAI</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="yoga.html">Yoga</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="subscription.html">Subscribe</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <div class="profile-icon">
+                    <img src="profile-icon.png" alt="Profile Icon" class="profile-img">
+                    <div class="dropdown-content">
+                        <a href="login.html">Login</a>
+                        <a href="signup.html">Sign Up</a>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome to FitGenAI</h2>
+            <p>Your ultimate fitness companion powered by AI. Explore personalized workout plans and more!</p>
+        </section>
+
+        <section id="timetable-section">
+            <h2>Create Your Fitness Timetable</h2>
+            <form id="timetable-form">
+                <label for="fitness-goal">Select Your Fitness Goal:</label>
+                <select id="fitness-goal" required>
+                    <option value="">--Choose an option--</option>
+                    <option value="lose-weight">Lose Weight</option>
+                    <option value="build-muscle">Build Muscle</option>
+                    <option value="improve-endurance">Improve Endurance</option>
+                </select>
+                <br><br>
+
+                <label for="days-per-week">Number of Days Per Week:</label>
+                <input type="number" id="days-per-week" min="1" max="7" required>
+                <br><br>
+
+                <label for="workout-duration">Workout Duration (minutes per session):</label>
+                <input type="number" id="workout-duration" min="10" max="120" required>
+                <br><br>
+
+                <button type="submit">Generate Timetable</button>
+            </form>
+
+            <div id="timetable-result" style="display: none;">
+                <h3>Your Custom Fitness Timetable:</h3>
+                <ul id="timetable-list"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FitGenAI</p>
+    </footer>
+</body>
+</html>
+

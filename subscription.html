@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitgenAI Subscription</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script/checkout.js"></script>
+    <script src="script/subscription-script.js"></script>
+    <script src="script/server.js"></script>
+
+</head>
+<body>
+  <header>
+    <div class="left-section">
+        <img class="fitgenAI-logo" src="icons/fitgenAI-logo.png">
+    </div>
+    <h1>FitGenAI</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="yoga.html">Yoga</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="subscription.html">Subscribe</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <h1>Subscribe to FitgenAI for ₹1/month</h1>
+        <form id="paymentForm">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe for ₹1/month</button>
+            <script>
+                document.getElementById('checkout.js')
+                    initiateCheckout();  // Trigger the checkout process
+                ;
+            </script>
+        </form>
+    </div>
+
+    <!-- Razorpay Payment Script -->
+    <footer>
+      <p>&copy; 2024 FitGenAI</p>
+    </footer>
+ 
+</body>
+</html>
